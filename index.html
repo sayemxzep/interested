@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Wall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Sticky Wall</h1>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Search notes..." aria-label="Search Notes">
+            </div>
+            <div class="menu">
+                <button aria-label="View Upcoming Notes">Upcoming</button>
+                <button aria-label="View Today's Notes">Today</button>
+                <button aria-label="View Calendar" onclick="window.location.href='calendar.html'">Calendar</button>
+                <button aria-label="View Sticky Wall">Sticky Wall</button>
+            </div>
+            <div class="settings">
+                <button aria-label="Open Settings">Settings</button>
+                <button aria-label="Sign Out">Sign Out</button>
+                <button id="theme-switcher" aria-label="Switch Theme">Switch Theme</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="note-container">
+                <!-- Notes View Options -->
+                <div class="notes-view-options">
+                    <select id="notes-view-select" aria-label="Select Notes View">
+                        <option value="all">All Notes</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- Notes will be dynamically loaded here -->
+                <button id="add-note-btn" aria-label="Add New Note" onclick="window.location.href='add-note.html'">Add Note</button>
+                <button aria-label="View Notes" onclick="window.location.href='view-notes.html'">View Notes</button>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Sticky Wall. All rights reserved. | calm by SAYEM X ZRP</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

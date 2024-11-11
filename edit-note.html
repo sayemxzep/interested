@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note - Sticky Wall</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Edit Note</h1>
+            <button class="back-button" onclick="window.location.href='index.html'">Back to Main</button>
+            <button class="toggle-dark-mode">Toggle Dark Mode</button>
+        </div>
+    </header>
+    <div class="toolbar-container">
+        <div id="editor-toolbar">
+            <button class="ql-bold"></button>
+            <button class="ql-italic"></button>
+            <button class="ql-underline"></button>
+            <button class="ql-strike"></button>
+            <button class="ql-list" value="ordered"></button>
+            <button class="ql-list" value="bullet"></button>
+            <button class="ql-link"></button>
+            <button class="ql-image"></button>
+            <button class="ql-code-block"></button>
+        </div>
+    </div>
+    <main class="edit-note-content">
+        <form id="edit-note-form">
+            <label for="edit-title">Title:</label>
+            <input type="text" id="edit-title" required>
+            
+            <div id="editor" style="height: 500px;"></div>
+            
+            <label for="edit-category">Category:</label>
+            <select id="edit-category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="edit-reminder">Reminder:</label>
+            <input type="datetime-local" id="edit-reminder">
+            
+            <button type="submit" class="save-button">Save Changes</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Sticky Wall. All rights reserved. | calm by SAYEM X ZRP</p>
+    </footer>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="edit-note.js"></script>
+</body>
+</html> 
